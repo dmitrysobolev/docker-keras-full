@@ -138,4 +138,4 @@ EXPOSE 8888
 EXPOSE 6006
 
 WORKDIR /srv/
-CMD /bin/bash -c 'jupyter notebook --no-browser --ip=* --NotebookApp.password="$PASSWD" "$@"'
+CMD /bin/bash -c 'jupyter notebook --allow-root --no-browser --ip=127.0.0.1 --NotebookApp.password="$PASSWD" "$@"'
