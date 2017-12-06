@@ -6,6 +6,9 @@ MAINTAINER gw0 [http://gw.tnode.com/] <gw.2017@ena.one>
 # install py2-tf-cpu/gpu (Python 2, TensorFlow, CPU/GPU)
 # (already installed in upstream image)
 
+# https sources issue fix
+RUN apt-get update && apt-get install -y apt-transport-https
+
 # install py2-th-cpu (Python 2, Theano, CPU/GPU)
 ARG THEANO_VERSION=1.0.0
 ENV THEANO_FLAGS='device=cpu,floatX=float32'
